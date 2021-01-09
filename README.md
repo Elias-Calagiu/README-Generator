@@ -1,13 +1,21 @@
-# 09 Node.js Homework: Professional README Generator
+# Professional README Generator
 
-      ## Application Title
-      * README Generator
-      * Generates professional README based on user input
-      * run npm install
-      * run node .index.js and respond to prompts
-      * anyone may contribute
-      * run it
-      * GNU LGPLv3
-      * githublink
-      * fakeemail@lol.com
-      ---
+## Application Title
+    * README Generator
+## Description
+    * This app generates professional READMEs for web developers based on user input
+## Installation
+    * Run npm install 
+## Usage
+    * Run node index.js and follow prompts
+## Contributing
+    * Anyone may contribute
+## Tests
+    * Run the app
+## License
+    * Mozilla Public License 2.0
+## Github
+    * <a href="https://github.com/Elias-Calagiu/README-Generator"></a>
+## Email
+    * eliasc81@gmail.com
+---

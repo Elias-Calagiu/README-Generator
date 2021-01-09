@@ -52,19 +52,27 @@ inquirer.prompt([
         },
     ])
     .then((response) => {
-      const mdOutput =  `# 09 Node.js Homework: Professional README Generator
+      const mdOutput =  `# Professional README Generator
 
-      ## Application Title
-      * ${response.title}
-      * ${response.Description}
-      * ${response.Installation}
-      * ${response.Usage}
-      * ${response.Contributing}
-      * ${response.Tests}
-      * ${response.License}
-      * ${response.GitHub}
-      * ${response.Email}
-      ---`
+## Application Title
+    * ${response.title}
+## Description
+    * ${response.Description}
+## Installation
+    * ${response.Installation}
+## Usage
+    * ${response.Usage}
+## Contributing
+    * ${response.Contributing}
+## Tests
+    * ${response.Tests}
+## License
+    * ${response.License}
+## Github
+    * <a href="${response.GitHub}"></a>
+## Email
+    * ${response.Email}
+---`
 
     
 // <html lang="en">
