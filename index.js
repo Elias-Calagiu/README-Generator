@@ -68,8 +68,8 @@ inquirer.prompt([
     * ${response.Tests}
 ## License
     * ${response.License}
-## Github
-    * <a href="${response.GitHub}"></a>
+## Github Link
+    * ${response.GitHub}
 ## Email
     * ${response.Email}
 ---`
