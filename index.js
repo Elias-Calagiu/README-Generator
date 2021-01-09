@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-
+const generateMarkdown = require(".generateMarkdown.js");
 // Psuedo Codez
 // TODO: create a prompt of inquirer Q's
 inquirer.prompt([
@@ -29,9 +29,30 @@ inquirer.prompt([
             message: 'Detail contribution guidelines here',
             name: 'Contributing',
         },
+        {
+            type: 'input',
+            message: 'Detail test instructions',
+            name: 'Tests',
+        },
+        {
+            type: 'list',
+            message: 'Choose your license!',
+            name: 'License',
+            choices: ["GNU AGPLv3", "GNU GPLv3", "GNU LGPLv3", "Mozilla Public License 2.0", "Apache License 2.0", "MIT License", "Boost Software License 1.0", "The Unlicense", "No license"],
+        },
+        {
+            type: 'input',
+            message: 'Enter GitHub Link',
+            name: 'GitHub',
+        },
+        {
+            type: 'input',
+            message: 'Enter email address',
+            name: 'Email',
+        },
     ])
     .then((response) => {
-        const htmlOutput = `<!DOCTYPE html>
+        `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -59,6 +80,9 @@ inquirer.prompt([
                             Title: ${response.title}<br>
                             Description: ${response.Description}<br>
                             Installation Instructions: ${response.Installation}<br>
+                            Application Usage: ${response.Usage}<br>
+                            Contribution Guidelines: ${response.Contributing}<br>
+                            Testing Instructions: ${response.Testing}<br>
                         </h5>
                         <p class="card-text" id="personalData"></p>
                     </div>
@@ -84,7 +108,7 @@ inquirer.prompt([
 </body>
 </html>`
 
-        fs.writeFile(`${response.title}.html`, htmlOutput, err => {
+        fs.writeFile(`${response.title}.md`, generateMarkdown, err => {
             if (err) {
                 console.log(err);
             } else {
