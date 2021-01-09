@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateMarkdown = require(".generateMarkdown.js");
+// const generateMarkdown = require("");
 // Psuedo Codez
 // TODO: create a prompt of inquirer Q's
 inquirer.prompt([
@@ -52,7 +52,7 @@ inquirer.prompt([
         },
     ])
     .then((response) => {
-        `<!DOCTYPE html>
+      const htmlOutput =  `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -94,7 +94,7 @@ inquirer.prompt([
                         <h5 class="card-title">Personal Details</h5>
                         <p class="card-text" id="personalData">
                             <a href="${response.GitHub}">GitHub Repo</a>
-                            <a href="${response.LinkedIn}">LinkedIn Profile</a>
+                            <a href="${response.Email}">Email Address</a>
                         </p>
                     </div>
                 </div>
@@ -108,7 +108,7 @@ inquirer.prompt([
 </body>
 </html>`
 
-        fs.writeFile(`${response.title}.md`, generateMarkdown, err => {
+        fs.writeFile(`README.md`, htmlOutput, err => {
             if (err) {
                 console.log(err);
             } else {
