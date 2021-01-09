@@ -1,7 +1,7 @@
 # Professional README Generator
 
 ## Application Title
-    * README Generator
+    * Sample README
 ## Description
     * Generates professional README based on user input
 ## Installation
@@ -15,7 +15,7 @@
 ## License
     * Mozilla Public License 2.0
 ## Github Link
-    * https://github.com/Elias-Calagiu/README-Generator
+     (https://github.com/Elias-Calagiu/README-Generator)
 ## Email
     * eliasc81@gmail.com
 ---
